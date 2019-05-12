@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Kounmpo</title>
+
+<link rel="icon" type="image/png" href="iconn.png">
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+  <body>
+
+<!-- Navigation Bar-->
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" >&times;</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="rating.html">Rating</a>
+    </div>
+
+
+  <div id="button1">
+<a id ="start" class="StartExploring1" > Welcome to Kounmpo</a>
+  </div>
+
+<!-- Video Background-->
+
+    <div class="parent">
+      <video autoplay muted loop id="myVideo">
+        <source src="vid.mp4" type="video/mp4">
+      </video>
+    </div>
+
+<span id="opennavbtn">&#9776; INFO  </span>
+
+
+
+<script>
+
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+
+  document.body.style.backgroundColor = "white";
+}
+
+var lastclick=true;
+
+
+$("#opennavbtn").click(function(){
+
+  if(lastclick==true){
+    openNav();
+    lastclick=false;
+    console.log("false");
+  }else{
+      closeNav();
+      lastclick=true;
+  }
+
+});
+
+$(".closebtn").click(function(){
+lastclick=true;
+closeNav();
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
